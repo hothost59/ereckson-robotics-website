@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Ereckson Middle School BEST Robotics"
+description = "A website for Ereckson Middle School BEST Robotics, presenting the team's work, committees, outreach, and achievements."
+version = "1.0.0"
+id = "artifacts/ereckson-robotics"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19562
+
+[services.development]
+run = "pnpm --filter @workspace/ereckson-robotics run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ereckson-robotics", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ereckson-robotics/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19562"
+BASE_PATH = "/"
