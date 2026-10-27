@@ -141,7 +141,7 @@ document.querySelector('#app').innerHTML = `
   <header class="topbar">
     <div class="wrap nav-shell">
       <a class="brand" href="#home" aria-label="Ereckson Middle School BEST Robotics, home">
-        <span class="brand-mark" aria-hidden="true">EMS</span><span class="brand-name">Ereckson Middle School<span>BEST Robotics</span></span>
+        <span class="brand-mark" aria-hidden="true">E.M.S.</span><span class="brand-name">Ereckson Middle School<span>BEST Robotics</span></span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
       <nav aria-label="Main navigation"><ul class="nav-links" id="primary-nav">
@@ -154,7 +154,7 @@ document.querySelector('#app').innerHTML = `
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <h1 id="hero-title">Ereckson Middle School<br><span>BEST Robotics</span></h1>
-          <p class="hero-quote">"Cracking the code between fact and fiction"</p>
+          <p class="hero-quote">Hungry for some BYTES</p>
           <div class="hero-actions"><a class="button" href="#about">Start Journey <span class="button-arrow" aria-hidden="true">↘</span></a></div>
         </div>
         <div class="hero-art">
@@ -166,7 +166,7 @@ document.querySelector('#app').innerHTML = `
       <div class="wrap about-grid">
         <div class="about-image"><div class="asset-slot image-slot" role="img" aria-label="Team photo image area. Paste its URL in imageLinks.aboutTeam">${imageMarkup(imageLinks.aboutTeam, 'Ereckson Robotics team')}</div></div>
         <div class="about-copy"><p class="eyebrow">Who we are</p><h2 id="about-title">Crafting Excellence Through Innovation and Dedication</h2>
-          <p>As the Ereckson Middle School BEST Robotics team, we are proud to represent the CoCo BEST Area. This competition is a tough, six-week challenge where we strive for excellence in numerous categories. Beyond just building a high-performing robot, our team is evaluated on various aspects of our work. These include the Simulink Design Award, which showcases our technical prowess in software design, and the Sportsmanship Award, which recognizes our commitment to teamwork and respect. We're also striving for the respected BEST Award, which is a significant honor that celebrates our efforts in project management, community outreach, and overall team spirit.</p>
+          <p>As the Ereckson Middle School BEST Robotics team, we are proud to represent the CoCo BEST Area. This competition is a tough, eight-week challenge where we strive for excellence in numerous categories. Beyond just building a high-performing robot, our team is evaluated on various aspects of our work. These include the Simulink Design Award, which showcases our technical prowess in software design, and the Sportsmanship Award, which recognizes our commitment to teamwork and respect. We're also striving for the respected BEST Award, which is a significant honor that celebrates our efforts in project management, community outreach, and overall team spirit.</p>
           <div class="stats" aria-label="Team stats"><div class="stat"><strong>22+</strong><span>Hours Dedicated</span></div><div class="stat"><strong>4+</strong><span>Years Experience</span></div><div class="stat"><strong>55%</strong><span>Effort and Determination</span></div></div>
           <a class="watch-link" href="#milestones">Watch Moments</a>
         </div>
