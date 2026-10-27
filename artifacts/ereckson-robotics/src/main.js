@@ -15,7 +15,7 @@ const projects = [
 ];
 
 const people = [
-  ['Sarah Bartlett', 'Display'], ['Reema Bhogireddi', 'Fabrication'], ['Rishika Cheela', 'Display'],
+  ['Lily Cagle', 'Fabrication'], ['Ramzi Elissa', 'Tech'], ['Rishika Cheela', 'Display'],
   ['Anika Daga', 'Media'], ['Saketh Darharadhi', 'Fabrication'], ['Aanya Gandhi', 'Web'],
   ['Sarvin Goel', 'Fabrication'], ['Ryan Hester', 'Display'], ['Mila Huie', 'Fabrication'],
   ['Zoe Huie', 'Display'], ['Ally Jin', 'Display'], ['Adhrit Katergi', 'Tech'],
@@ -73,8 +73,8 @@ const imageLinks = {
     'sportsmanship-posters': '',
   },
   people: {
-    'sarah-bartlett': '',
-    'reema-bhogireddi': '',
+    'lily-cagle': '',
+    'ramzi-elissa': '',
     'rishika-cheela': '',
     'anika-daga': '',
     'saketh-darharadhi': '',
