@@ -14,7 +14,7 @@ const projects = [
 
 const people = [
   ['Lily Cagle', 'Fabrication'], ['Ramzi Elissa', 'Tech'], ['Violet Forbes', 'Media'],
-  ['Anika Daga', 'Media'], ['Saketh Darharadhi', 'Fabrication'], ['Aanya Gandhi', 'Web'],
+  ['Aanya Gandhi', 'Web and Media'], ['Saketh Darharadhi', 'Fabrication'], ['Aanya Gandhi', 'Web'],
   ['Sarvin Goel', 'Fabrication'], ['Ryan Hester', 'Display'], ['Mila Huie', 'Fabrication'],
   ['Zoe Huie', 'Display'], ['Ally Jin', 'Display'], ['Adhrit Katergi', 'Tech'],
   ['Hyungju Kim', 'Fabrication'], ['Jaden Kim', 'Display'], ['Prisha Kumbasi', 'Display'],
@@ -72,7 +72,6 @@ const imageLinks = {
     'lily-cagle': '',
     'ramzi-elissa': '',
     'violet-forbes': '',
-    'anika-daga': '',
     'saketh-darharadhi': '',
     'aanya-gandhi': '',
     'sarvin-goel': '',
