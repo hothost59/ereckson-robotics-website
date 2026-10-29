@@ -65,7 +65,7 @@ const imageLinks = {
   teamLogo: '/ereckson-huskies-logo.png',
   aboutTeam: '',
   projects: {
-    'finding-sponsors': '',
+    'finding-sponsors': '/finding-sponsors.png',
     'steam-center': '',
   },
   people: {
