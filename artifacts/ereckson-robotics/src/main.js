@@ -66,7 +66,7 @@ const imageLinks = {
   aboutTeam: '',
   projects: {
     'finding-sponsors': '/finding-sponsors.png',
-    'steam-center': '',
+    'steam-center': '/steam-center.png',
   },
   people: {
     'lily-cagle': '',
