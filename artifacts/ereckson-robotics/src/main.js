@@ -8,10 +8,8 @@ const committees = [
 ];
 
 const projects = [
-  { title: 'T-Shirt Making', text: 'This year, we decided to take on the task of designing and making our own t-shirts. We made them using a Cricut Machine. It was a long process, but it helped us improve our communication and teamwork skills.', points: ['Enhanced Teamwork Skills', 'Taught perserverence and leadership', 'Creates a sense of identity'] },
   { title: 'Finding Sponsors', text: 'During the beginning of the year, we researched and called many local companies to ask if they could support our robotics team through sponsorships, donations, or resources.', points: ['Overcame Public Anxiety', 'Strengthens community connections', 'Creates new networking opportunities'] },
   { title: 'STEAM Center', text: 'We have dedicated countless hours at the STEAM Center, receiving valuable mentorship and guidance from Mr. Gadd as well as the experienced students of Allen High School Robotics, which has greatly helped us refine our skills and strategies.', points: ['Stategy Development', 'Problem-Solving', 'Teamwork and Communication'] },
-  { title: 'Sportsmanship Posters', text: 'We wanted to show our appreciation for hosting the Coco BEST Regional Competition at Ereckson Middle School. To support and encourage friendly competition, our members created personalized posters for each participating team.', points: ['Builds Creativity', 'Boosts team spirit', 'Provides a Creative Break'] },
 ];
 
 const people = [
@@ -67,10 +65,8 @@ const imageLinks = {
   teamLogo: '/ereckson-huskies-logo.png',
   aboutTeam: '',
   projects: {
-    't-shirt-making': '',
     'finding-sponsors': '',
     'steam-center': '',
-    'sportsmanship-posters': '',
   },
   people: {
     'lily-cagle': '',
