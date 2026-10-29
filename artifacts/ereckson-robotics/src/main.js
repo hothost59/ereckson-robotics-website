@@ -64,7 +64,7 @@ const faqs = [
 // IMAGE LINKS — paste each year's image URL between the blank quotes.
 // Leave a value blank to keep that image area empty.
 const imageLinks = {
-  teamLogo: '',
+  teamLogo: '/ereckson-huskies-logo.png',
   aboutTeam: '',
   projects: {
     't-shirt-making': '',
