@@ -9,45 +9,64 @@ const committees = [
 
 const projects = [
   { title: 'Finding Sponsors', text: 'During the beginning of the year, we researched and called many local companies to ask if they could support our robotics team through sponsorships, donations, or resources.', points: ['Overcame Public Anxiety', 'Strengthens community connections', 'Creates new networking opportunities'] },
-  { title: 'STEAM Center', text: 'We have dedicated countless hours at the STEAM Center, receiving valuable mentorship and guidance from Mr. Gadd as well as the experienced students of Allen High School Robotics, which has greatly helped us refine our skills and strategies.', points: ['Stategy Development', 'Problem-Solving', 'Teamwork and Communication'] },
+  { title: 'STEAM Center', text: 'We have dedicated countless hours at the STEAM Center, receiving valuable mentorship and guidance from Mr. Gadd as well as the experienced students of Allen High School Robotics, which has greatly helped us refine our skills and strategies.', points: ['Strategy Development', 'Problem-Solving', 'Teamwork and Communication'] },
 ];
 
 const people = [
-  ['Lily Cagle', 'Fabrication'], ['Ramzi Elissa', 'Tech'], ['Violet Forbes', 'Media'],
-  ['Aanya Gandhi', 'Web and Media'], ['Saketh Darharadhi', 'Fabrication'], ['Aanya Gandhi', 'Web'],
-  ['Sarvin Goel', 'Fabrication'], ['Ryan Hester', 'Display'], ['Mila Huie', 'Fabrication'],
-  ['Zoe Huie', 'Display'], ['Ally Jin', 'Display'], ['Adhrit Katergi', 'Tech'],
-  ['Hyungju Kim', 'Fabrication'], ['Jaden Kim', 'Display'], ['Prisha Kumbasi', 'Display'],
-  ['Ishaan Lalani', 'Tech'], ['Doyeop Lee', 'Tech'], ['Ryan Lee', 'Fabrication'],
-  ['Abbie Macfoy', 'Tech'], ['Addie Macfoy', 'Fabrication'], ['Shivika Misra', 'Tech'],
-  ['Avyukt Prabhakar', 'Fabrication'], ['Arohi Sharma', 'Fabrication'], ['Leon Shen', 'Display'],
-  ['Prisha Kumbasi', 'Display'], ['Sophie Shen', 'Display'], ['Pranav Sripada', 'Fabrication'],
-  ['Poorvee Srivastava', 'Media'], ['Dhruvi Valmiki', 'Display'], ['Navya Vyas', 'Web & Media'],
-  ['Nivaan Vyas', 'Fabrication'], ['Emma Yang', 'Fabrication'], ['Doyoon Yeom', 'Media'],
-  ['Ellie Zhou', 'Display'], ['William Zhao', 'Tech'], ['Ms. Churchill', 'Sponsor'],
+  ['Lily Cagle', 'Fabrication'],
+  ['Ramzi Elissa', 'Tech'],
+  ['Violet Forbes', 'Web and Media'],
+  ['Aanya Gandhi', 'Web and Media'],
+  ['Avni Goyal', 'Display'],
+  ['Ryan Hester', 'Tech'],
+  ['Pranika Jain', 'Display'],
+  ['Ally Jin', 'Display'],
+  ['Arnik Jayervand', 'Fabrication'],
+  ['Alex Jo', 'Tech'],
+  ['Zidaan Kazi', 'Tech'],
+  ['Brayden Keller', 'Tech'],
+  ['Brian Kim', 'Fabrication'],
+  ['Claire Lee', 'Fabrication'],
+  ['Abieyuwa Macfoy', 'Tech'],
+  ['Adesuwa Macfoy', 'Fabrication'],
+  ['Yuvan Manimaran', 'Display'],
+  ['Harshith Medida', 'Web and Media'],
+  ['Shivika Misra', 'Tech'],
+  ['Riley Pascual', 'Web and Media'],
+  ['Izyan Qureshi', 'Fabrication'],
+  ['Carissa Samant', 'Web and Media'],
+  ['Arohi Sharma', 'Fabrication'],
+  ['Leon Shen', 'Display'],
+  ['Banji Shobowale', 'Display'],
+  ['Aashna Shrivastava', 'Fabrication'],
+  ['Simon Wei', 'Tech'],
+  ['Junior Ye', 'Fabrication'],
+  ['Justin Ye', 'Fabrication'],
+  ['Henry Zhang', 'Fabrication'],
+  ['Ms. Churchill', 'Sponsor'],
   ['Mr. Gunderson', 'Sponsor'],
 ];
 
 const process = [
-  ['Define & Research', 'We indentify the problem and challenge, and then we gather information and ovserve existing solutions.'],
-  ['Plan', 'We generate ideas and possible solutions, and create a plan or streategy for building the design.'],
+  ['Define & Research', 'We identify the problem and challenge, and then we gather information and observe existing solutions.'],
+  ['Plan', 'We generate ideas and possible solutions, and create a plan or strategy for building the design.'],
   ['Develop & Test', 'Build and develop the prototype or solution, and test it, identify problems, and make improvements.'],
   ['Reflect', 'When we are done we present the final solution, and then evaluate the results and see what we can do better and keep on making improvements.'],
 ];
 
 const milestones = [
-  ['Sanding', 'Display', 'Since we did not want to spend money on new display boards, our Display team is working hard to sand down the old boards’ paint coating to prepare them for a fresh new layer.'],
+  ['Acquiring Trifolds', 'Display', 'Our Display team is gathering trifold boards and the other supplies we need to build this year’s team display, so everything is ready before construction begins.'],
   ['Driving', 'Fab and Tech', 'In each competition, we have multiple drivers operating the robot on the course, supported by spotters who guide them. To improve our skills, we made numerous visits to the STEAM Center to receive guidance from Allen High School students and Mr. Gadd.'],
   ['Marketing', 'People from all different teams', 'Our Marketing team prepared and memorized a comprehensive presentation to deliver to the judges, highlighting our team’s strengths and effectively showcasing the skills we developed throughout the season.'],
   ['Photos', 'Media', 'Our Media team has been capturing photos and videos that showcase the effort, dedication, and teamwork behind all the hard work and challenges of our robotics journey.'],
-  ['Game', 'Display', 'This year, our game featured a robot named Timmy, in which participants aimed to place small golf balls into designated openings on his body. The process was lengthy and challenging, but the final outcome was successful and rewarding.'],
+  ['Game', 'Display', 'This year\'s game is Byte to Bite, where robots run a restaurant from farm to table: harvesting ingredients, building meals, and delivering them to diners. The process was lengthy and challenging, but the final outcome was successful and rewarding.'],
   ['Coding', 'Web', 'Our Web committee is diligently working to design and develop a fully functional website for the competition. They are responsible for organizing content, creating an intuitive layout, and ensuring that the site effectively showcases our team’s achievements and skills.'],
 ];
 
 const testimonials = [
   ['"The Ereckson Middle School Husky Robotics program provides a chance for students of various interests and abilities to come together and work collaboratively. It helps students improve their planning, engineering, leadership, and presentation skills as well as other career capabilities."', 'Lori Allen', '7th Grade GT Science'],
   ['“I believe the robotics team at Ereckson is a fantastic group to join. They are always collaborating with one another to help students reach their full potential. Their participation in the BEST Robotics program involves designing, building, and programming robots, and they also benefit from mentorship by experienced coaches and high school robotics members, fostering growth and confidence in STEM fields.”', 'Christopher Burgos', '7th Grade Math'],
-  ['“Robotics has been part of Ereckson for as long as I can remember. It has provided students with interests in engineering and robotics an opportunity to learn these skills and applications outside of the classroom. It has allowed the students to learn and apply skills they are interested in and show these skills as shown by the successes that EMS Robotics has achieved throughout the years.”', 'James Byers', 'Fundamentals of Buisness Information Marketing'],
+  ['“Robotics has been part of Ereckson for as long as I can remember. It has provided students with interests in engineering and robotics an opportunity to learn these skills and applications outside of the classroom. It has allowed the students to learn and apply skills they are interested in and show these skills as shown by the successes that EMS Robotics has achieved throughout the years.”', 'James Byers', 'Fundamentals of Business Information Marketing'],
   ['"When I first got to Ereckson it was obvious that the Robotics program was a top-notch organization. There is also such a strong sense of community with the students involved in BEST Husky Robotics; working towards a common goal and producing high-quality work builds great camaraderie."', 'Joanna DeVoto', 'Orchestra'],
   ['“BEST Robotics isn’t just ROBOTICS. From marketing, to engineering basics, to oral presentations, to learning how to problem solve and think critically, BEST Robotics truly shapes students and prepares them for the future. The skills learned are irreplaceable.”', 'Sarah Twedt', '8th grade GT Science'],
 ];
@@ -69,41 +88,38 @@ const imageLinks = {
     'steam-center': '/steam-center.png',
   },
   people: {
-    'lily-cagle': '',
-    'ramzi-elissa': '',
-    'violet-forbes': '',
-    'saketh-darharadhi': '',
-    'aanya-gandhi': '',
-    'sarvin-goel': '',
-    'ryan-hester': '',
-    'mila-huie': '',
-    'zoe-huie': '',
-    'ally-jin': '',
-    'adhrit-katergi': '',
-    'hyungju-kim': '',
-    'jaden-kim': '',
-    'prisha-kumbasi': '',
-    'ishaan-lalani': '',
-    'doyeop-lee': '',
-    'ryan-lee': '',
-    'abbie-macfoy': '',
-    'addie-macfoy': '',
-    'shivika-misra': '',
-    'avyukt-prabhakar': '',
-    'arohi-sharma': '',
-    'leon-shen': '',
-    'sophie-shen': '',
-    'pranav-sripada': '',
-    'poorvee-srivastava': '',
-    'dhruvi-valmiki': '',
-    'navya-vyas': '',
-    'nivaan-vyas': '',
-    'emma-yang': '',
-    'doyoon-yeom': '',
-    'ellie-zhou': '',
-    'william-zhao': '',
-    'ms-churchill': '',
-    'mr-gunderson': '',
+    'lily-cagle': '/photos/lily-cagle.png',
+    'ramzi-elissa': '/photos/ramzi-elissa.png',
+    'violet-forbes': '/photos/violet-forbes.png',
+    'aanya-gandhi': '/photos/aanya-gandhi.png',
+    'avni-goyal': '/photos/avni-goyal.png',
+    'ryan-hester': '/photos/ryan-hester.png',
+    'pranika-jain': '/photos/pranika-jain.png',
+    'ally-jin': '/photos/ally-jin.png',
+    'arnik-jayervand': '/photos/arnik-jayervand.webp',
+    'alex-jo': '/photos/alex-jo.png',
+    'zidaan-kazi': '/photos/zidaan-kazi.png',
+    'brayden-keller': '/photos/brayden-keller.png',
+    'brian-kim': '/photos/brian-kim.webp',
+    'claire-lee': '/photos/claire-lee.jpg',
+    'abieyuwa-macfoy': '/photos/abieyuwa-macfoy.png',
+    'adesuwa-macfoy': '/photos/adesuwa-macfoy.webp',
+    'yuvan-manimaran': '/photos/yuvan-manimaran.png',
+    'harshith-medida': '/photos/harshith-medida.png',
+    'shivika-misra': '/photos/shivika-misra.png',
+    'riley-pascual': '/photos/riley-pascual.png',
+    'izyan-qureshi': '',
+    'carissa-samant': '/photos/carissa-samant.png',
+    'arohi-sharma': '/photos/arohi-sharma.webp',
+    'leon-shen': '/photos/leon-shen.png',
+    'banji-shobowale': '/photos/banji-shobowale.png',
+    'aashna-shrivastava': '/photos/aashna-shrivastava.webp',
+    'simon-wei': '/photos/simon-wei.png',
+    'junior-ye': '/photos/junior-ye.webp',
+    'justin-ye': '/photos/justin-ye.webp',
+    'henry-zhang': '/photos/henry-zhang.webp',
+    'ms-churchill': '/photos/ms-churchill.png',
+    'mr-gunderson': '/photos/mr-gunderson.png',
   },
   competitionTheme: '',
   fieldKickoff: '',
@@ -115,8 +131,8 @@ const imageLinks = {
     'sarah-twedt': '',
   },
   milestones: {
-    sanding: '',
-    driving: '',
+    'acquiring-trifolds': '',
+    driving: '/photos/driving.jpg',
     marketing: '',
     photos: '',
     game: '',
@@ -179,7 +195,7 @@ document.querySelector('#app').innerHTML = `
     <section class="section" id="people" aria-labelledby="people-title">
       <div class="wrap">
         <div class="people-head"><div class="section-head"><p class="eyebrow">The people behind the work</p><h2 id="people-title">People</h2><p class="section-intro">These are all of the spectacular people that help contribute to make our team who it is today.</p></div><p class="people-count" id="people-count" aria-live="polite"></p></div>
-        <ul class="filter-list" aria-label="Filter team members">${['Everyone', 'Tech', 'Display', 'Fabrication', 'Web and Media', 'Sponsers'].map((filter, i) => `<li><button type="button" class="filter-button" data-filter="${e(filter)}" aria-pressed="${i === 0 ? 'true' : 'false'}">${e(filter)}</button></li>`).join('')}</ul>
+        <ul class="filter-list" aria-label="Filter team members">${['Everyone', 'Tech', 'Display', 'Fabrication', 'Web and Media', 'Sponsors'].map((filter, i) => `<li><button type="button" class="filter-button" data-filter="${e(filter)}" aria-pressed="${i === 0 ? 'true' : 'false'}">${e(filter)}</button></li>`).join('')}</ul>
         <div class="people-grid" id="people-grid">${people.map(([name, role]) => {
           const slug = slugify(name);
           return `<article class="person" data-role="${e(role)}"><div class="portrait-slot image-slot" role="img" aria-label="${e(name)} portrait area. Paste its URL in imageLinks.people.${e(slug)}">${imageMarkup(imageLinks.people[slug], `${name} portrait`)}</div><div class="person-details"><h3>${e(name)}</h3><p>${e(role)}</p></div></article>`;
@@ -187,21 +203,21 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
     <section class="section section--blue" id="process" aria-labelledby="process-title">
-      <div class="wrap"><p class="eyebrow">A path from idea to impact</p><h2 id="process-title">Working Process</h2><p class="section-intro">This is the Design Process, which is a process we use to work effiently and effectively as a team towards our goal</p>
+      <div class="wrap"><p class="eyebrow">A path from idea to impact</p><h2 id="process-title">Working Process</h2><p class="section-intro">This is the Design Process, which is a process we use to work efficiently and effectively as a team towards our goal</p>
         <div class="process-grid">${process.map(([title, text], i) => `<article class="process-step"><span class="step-line" aria-hidden="true"></span><span class="step-num">0${i + 1}</span><h3>${e(title)}</h3><p>${e(text)}</p></article>`).join('')}</div>
       </div>
     </section>
     <section class="section section--white" id="competition" aria-labelledby="competition-title">
       <div class="wrap competition">
-        <div class="game-aside"><div class="game-diagram image-slot" role="img" aria-label="AI Factiod theme image area. Paste its URL in imageLinks.competitionTheme">${imageMarkup(imageLinks.competitionTheme, 'AI Factiod competition theme')}</div><div class="game-caption"><span>01 &nbsp; Competition</span><span>AI Factiods</span></div></div>
-        <div class="competition-copy"><p class="eyebrow">Innovation Hub</p><h2 id="competition-title">Competition</h2><p>The BEST Robotics program is a competition with middle and high schools competing throughout the United States. In the time span of 2 months, we must build a robot fit to perform the tasks at the competition. We also have to code the robot, build an exhibit showcasing our team, market, and show our organization to others. This year's theme is artificial intelligence, better known as AI Factoid. The game's purpose is to piece together a robot capable of successfully transporting pieces of data (golf balls) from one part of the playing field to the other. Some of the objects are not true pieces of information, and we will not gain any points if we collect them. The game aims to claim as many pieces of data as possible while scoring the most points in a limited amount of time.</p>
+        <div class="game-aside"><div class="game-diagram image-slot" role="img" aria-label="Byte to Bite theme image area. Paste its URL in imageLinks.competitionTheme">${imageMarkup(imageLinks.competitionTheme, 'Byte to Bite competition theme')}</div><div class="game-caption"><span>01 &nbsp; Competition</span><span>Byte to Bite</span></div></div>
+        <div class="competition-copy"><p class="eyebrow">Innovation Hub</p><h2 id="competition-title">Competition</h2><p>The BEST Robotics program is a competition with middle and high schools competing throughout the United States. In the time span of 2 months, we must build a robot fit to perform the tasks at the competition. We also have to code the robot, build an exhibit showcasing our team, market, and show our organization to others. This year's theme is Byte to Bite, a restaurant where the food of the future is served to the diners of today. Our robot has to tend a garden, harvest ingredients, build meals, and deliver them to different areas of the restaurant. Robots spin a water valve to irrigate their garden, twist a handle to deploy a crop-tending drone, and even deliver completed meals autonomously to the Dining Room. The goal is to score the most points in the least amount of time.</p>
           <div class="competition-metrics"><div class="metric"><strong>17+</strong><span>Schools Competing</span></div><div class="metric"><strong>5</strong><span>Drivers</span></div></div>
-          <div class="kickoff-note">AI Factiod <strong>Theme</strong> &nbsp; · &nbsp; Kickoff - The Field</div>
+          <div class="kickoff-note">Byte to Bite <strong>Theme</strong> &nbsp; · &nbsp; Kickoff - The Field</div>
         </div>
       </div>
     </section>
     <section class="section field-section" id="field" aria-labelledby="field-title">
-      <div class="wrap field-grid"><div class="field-art image-slot" role="img" aria-label="Kickoff field image area. Paste its URL in imageLinks.fieldKickoff">${imageMarkup(imageLinks.fieldKickoff, 'Collin County kickoff field')}</div><div><p class="eyebrow">Competition field</p><h2 id="field-title">The Field</h2><p>Four teams compete on a game field at the same time. Each team performs tasks in its specified region to gain points. The field consists of a latch that you have to open to enter the inner field.</p><ul class="field-bullets"><li>Got to learn about the challenges we have to face</li><li>Saw the feild for the first time</li><li>Saw all of the rules that we have to follow</li></ul><span class="kickoff-note">Collin County <strong>Kickoff</strong></span></div></div>
+      <div class="wrap field-grid"><div class="field-art image-slot" role="img" aria-label="Kickoff field image area. Paste its URL in imageLinks.fieldKickoff">${imageMarkup(imageLinks.fieldKickoff, 'Collin County kickoff field')}</div><div><p class="eyebrow">Competition field</p><h2 id="field-title">The Field</h2><p>The field is the Byte to Bite Restaurant, split into four quadrants around a shared Autonomous Dining Room. Each team's quadrant has a Garden, Dishware, Warming Shelves, a Dining Room entrance, and access to a Balance Buffet that is shared with a team on the opposite side.</p><ul class="field-bullets"><li>Got to learn about the challenges we have to face</li><li>Saw the field for the first time</li><li>Saw all of the rules that we have to follow</li></ul><span class="kickoff-note">Collin County <strong>Kickoff</strong></span></div></div>
     </section>
     <section class="section section--white" id="testimonials" aria-labelledby="testimonials-title">
       <div class="wrap"><div class="section-head"><p class="eyebrow">From our school community</p><h2 id="testimonials-title">Testimonials</h2><p class="section-intro">Teacher testimonials emphasize the valuable skills students develop through robotics.</p></div>
@@ -219,7 +235,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-title"><p class="eyebrow">Ereckson Middle School</p><h2>Ereckson Middle School BEST Robotics</h2><p>Cracking the code between fact and fiction</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#committees">Committees</a><a href="#projects">Project Stories</a><a href="#people">People</a><a href="#process">Working Process</a><a href="#competition">Competition</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQs</a><a href="#milestones">Milestones</a></nav></div><div class="footer-bottom"><p>© Copyright <strong>EMS Robotics</strong> All Rights Reserved</p><p>Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a></p><a class="back-top" href="#home">Back to top ↑</a></div></div></footer>
+  <footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-title"><p class="eyebrow">Ereckson Middle School</p><h2>Ereckson Middle School BEST Robotics</h2><p>From Byte to Bite</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#committees">Committees</a><a href="#projects">Project Stories</a><a href="#people">People</a><a href="#process">Working Process</a><a href="#competition">Competition</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQs</a><a href="#milestones">Milestones</a></nav></div><div class="footer-bottom"><p>© Copyright <strong>EMS Robotics</strong> All Rights Reserved</p><p>Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a></p><a class="back-top" href="#home">Back to top ↑</a></div></div></footer>
 `;
 
 const menuButton = document.querySelector('.menu-toggle');
@@ -251,7 +267,7 @@ function filterPeople(filter) {
       || (filter === 'Display' && role === 'display')
       || (filter === 'Fabrication' && role === 'fabrication')
       || (filter === 'Web and Media' && (role.includes('web') || role.includes('media')))
-      || (filter === 'Sponsers' && role === 'sponsor');
+      || (filter === 'Sponsors' && role === 'sponsor');
     card.hidden = !show;
     if (show) visible += 1;
   });

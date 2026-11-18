@@ -119,6 +119,8 @@ h2 { max-width: 780px; margin-bottom: 18px; font-size: clamp(2.25rem, 5vw, 4rem)
 .people-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 34px; }
 .person { min-width: 0; background: white; border: 1px solid #d1e0eb; animation: arrive .35s both; }
 .portrait-slot { aspect-ratio: 1/1; }
+.portrait-slot .slot-image { object-position: center top; }
+.portrait-slot .slot-image[src*="junior-ye"] { object-position: center 30%; }
 .portrait-path { display: none; }
 .person-details { padding: 13px 14px 15px; }
 .person h3 { margin: 0 0 4px; font-size: 15px; letter-spacing: -.025em; }
