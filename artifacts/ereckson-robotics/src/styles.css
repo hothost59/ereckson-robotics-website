@@ -49,7 +49,9 @@ h2 { max-width: 780px; margin-bottom: 18px; font-size: clamp(2.25rem, 5vw, 4rem)
 .nav-shell { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; min-width: 230px; }
 .brand-mark { position: relative; display: grid; width: 36px; height: 36px; place-items: center; background: var(--blue-deep); color: #fff; font: 700 12px var(--mono); letter-spacing: -.1em; }
-.brand-mark::after { position: absolute; content: ''; width: 10px; height: 10px; right: -4px; top: -4px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); }
+.brand-mark { background: none; }
+.brand-mark img { display: block; width: 36px; height: 36px; }
+.brand-mark::after { display: none; }
 .brand-name { font: 800 12px/1.2 var(--display); letter-spacing: .025em; }
 .brand-name span { display: block; margin-top: 3px; color: var(--blue); font: 700 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
 .nav-links { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); list-style: none; padding: 0; margin: 0; }
@@ -85,6 +87,7 @@ h2 { max-width: 780px; margin-bottom: 18px; font-size: clamp(2.25rem, 5vw, 4rem)
 
 .about-grid { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: clamp(40px, 8vw, 105px); }
 .asset-slot { height: 365px; }
+.asset-slot .slot-image { object-fit: contain; padding: 18px; background: #fff; }
 .about-copy h2 { margin-bottom: 22px; }
 .about-copy p { color: var(--ink-soft); }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 36px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -101,7 +104,6 @@ h2 { max-width: 780px; margin-bottom: 18px; font-size: clamp(2.25rem, 5vw, 4rem)
 .committee-number { display: block; margin-bottom: 24px; color: #81a8c9; font: 11px var(--mono); }
 .committee h3 { margin-bottom: 11px; font-size: 23px; }
 .committee p { margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.65; }
-.committee-arrow { position: absolute; right: 25px; top: 25px; color: var(--blue); font-size: 20px; }
 
 .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .project { display: grid; grid-template-columns: 1fr 150px; align-items: center; min-height: 205px; padding: 27px; background: white; border: 1px solid #d6e3ed; }
@@ -117,7 +119,7 @@ h2 { max-width: 780px; margin-bottom: 18px; font-size: clamp(2.25rem, 5vw, 4rem)
 .filter-button { padding: 8px 11px; border: 1px solid #b9cede; background: transparent; color: #476481; font-size: 11px; font-weight: 700; cursor: pointer; transition: background .18s ease, color .18s ease; }
 .filter-button:hover, .filter-button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: white; }
 .people-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 34px; }
-.person { min-width: 0; background: white; border: 1px solid #d1e0eb; animation: arrive .35s both; }
+.person { min-width: 0; background: white; border: 1px solid #d1e0eb; }
 .portrait-slot { aspect-ratio: 1/1; }
 .portrait-slot .slot-image { object-position: center top; }
 .portrait-slot .slot-image[src*="junior-ye"] { object-position: center 30%; }
@@ -281,3 +283,39 @@ h2 { max-width: 780px; margin-bottom: 18px; font-size: clamp(2.25rem, 5vw, 4rem)
   .logo-asset-slot .slot-image { animation: none; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Logos and illustrations: show the whole image on white instead of cropping */
+.milestone-art .slot-image[src*="byte-to-bite-logo"], .game-diagram .slot-image { object-fit: contain; background: #fff; padding: 10px; }
+.testimonial-photo .slot-image { object-position: center 20%; }
+/* Photos milestone: whole portrait photo, sides filled with a blurred copy */
+.milestone-art:has(.slot-image[src*="photos-section"])::before { content: ''; position: absolute; inset: -24px; background: url('/photos-section.jpg') center 60% / cover; filter: blur(20px) brightness(.92); }
+.milestone-art .slot-image[src*="photos-section"] { object-fit: contain; object-position: center; background: transparent; padding: 0; }
+/* Acquiring Trifolds milestone: whole display board, sides filled with a blurred copy */
+.milestone-art:has(.slot-image[src*="trifold-display"])::before { content: ''; position: absolute; inset: -24px; background: url('/trifold-display.jpg') center / cover; filter: blur(20px) brightness(.92); }
+.milestone-art .slot-image[src*="trifold-display"] { object-fit: contain; background: transparent; padding: 0; }
+.milestone-art .slot-image[src*="coding"] { object-position: left top; }
+
+/* Animations */
+.reveal { opacity: 0; translate: 0 28px; }
+.reveal.in { opacity: 1; translate: 0 0; animation: reveal-up .75s cubic-bezier(.2, .7, .2, 1) backwards; animation-delay: var(--d, 0ms); }
+@keyframes reveal-up { from { opacity: 0; translate: 0 28px; } to { opacity: 1; translate: 0 0; } }
+.hero-copy > * { animation: reveal-up .8s cubic-bezier(.2, .7, .2, 1) both; }
+.hero-copy > :nth-child(2) { animation-delay: .12s; }
+.hero-copy > :nth-child(3) { animation-delay: .24s; }
+.project, .quote-card, .milestone, .person, .process-step { transition: translate .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.project:hover, .quote-card:hover, .milestone:hover, .person:hover { translate: 0 -5px; box-shadow: 0 14px 30px rgba(20, 50, 90, .12); border-color: #a9c4dc; }
+.milestone-art .slot-image, .portrait-slot .slot-image { transition: transform .5s ease; }
+.milestone:hover .milestone-art .slot-image, .person:hover .portrait-slot .slot-image { transform: scale(1.05); }
+.topbar { transition: box-shadow .3s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; translate: none; }
+  .hero-copy > * { animation: none; }
+  .project:hover, .quote-card:hover, .milestone:hover, .person:hover { translate: none; }
+}
+
+/* People filter: cards slide to their new spots (see filterPeople in main.js); the count bumps */
+.people-count.bump { animation: count-bump .4s ease; }
+@keyframes count-bump { 0% { opacity: .3; translate: 0 6px; } 100% { opacity: 1; translate: 0 0; } }
+.filter-button { transition: background .25s ease, color .25s ease, border-color .25s ease, translate .2s ease; }
+.filter-button:active { translate: 0 1px; }
+@media (prefers-reduced-motion: reduce) { .people-count.bump { animation: none; } }

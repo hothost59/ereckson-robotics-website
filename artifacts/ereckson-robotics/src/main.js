@@ -64,10 +64,10 @@ const milestones = [
 ];
 
 const testimonials = [
-  ['"The Ereckson Middle School Husky Robotics program provides a chance for students of various interests and abilities to come together and work collaboratively. It helps students improve their planning, engineering, leadership, and presentation skills as well as other career capabilities."', 'Lori Allen', '7th Grade GT Science'],
+  ['“The Ereckson Middle School Husky Robotics program provides a chance for students of various interests and abilities to come together and work collaboratively. It helps students improve their planning, engineering, leadership, and presentation skills as well as other career capabilities.”', 'Lori Allen', '7th Grade GT Science'],
   ['“I believe the robotics team at Ereckson is a fantastic group to join. They are always collaborating with one another to help students reach their full potential. Their participation in the BEST Robotics program involves designing, building, and programming robots, and they also benefit from mentorship by experienced coaches and high school robotics members, fostering growth and confidence in STEM fields.”', 'Christopher Burgos', '7th Grade Math'],
   ['“Robotics has been part of Ereckson for as long as I can remember. It has provided students with interests in engineering and robotics an opportunity to learn these skills and applications outside of the classroom. It has allowed the students to learn and apply skills they are interested in and show these skills as shown by the successes that EMS Robotics has achieved throughout the years.”', 'James Byers', 'Fundamentals of Business Information Marketing'],
-  ['"When I first got to Ereckson it was obvious that the Robotics program was a top-notch organization. There is also such a strong sense of community with the students involved in BEST Husky Robotics; working towards a common goal and producing high-quality work builds great camaraderie."', 'Joanna DeVoto', 'Orchestra'],
+  ['“When I first got to Ereckson it was obvious that the Robotics program was a top-notch organization. There is also such a strong sense of community with the students involved in BEST Husky Robotics; working towards a common goal and producing high-quality work builds great camaraderie.”', 'Joanna DeVoto', 'Orchestra'],
   ['“BEST Robotics isn’t just ROBOTICS. From marketing, to engineering basics, to oral presentations, to learning how to problem solve and think critically, BEST Robotics truly shapes students and prepares them for the future. The skills learned are irreplaceable.”', 'Sarah Twedt', '8th grade GT Science'],
 ];
 
@@ -82,7 +82,7 @@ const faqs = [
 // Leave a value blank to keep that image area empty.
 const imageLinks = {
   teamLogo: '/ereckson-huskies-logo.png',
-  aboutTeam: '',
+  aboutTeam: '/coco-best-logo.jpg',
   projects: {
     'finding-sponsors': '/finding-sponsors.png',
     'steam-center': '/steam-center.png',
@@ -121,22 +121,22 @@ const imageLinks = {
     'ms-churchill': '/photos/ms-churchill.png',
     'mr-gunderson': '/photos/mr-gunderson.png',
   },
-  competitionTheme: '',
-  fieldKickoff: '',
+  competitionTheme: '/season-welcome.jpg',
+  fieldKickoff: '/field.jpg',
   testimonials: {
-    'lori-allen': '',
-    'christopher-burgos': '',
-    'james-byers': '',
-    'joanna-devoto': '',
-    'sarah-twedt': '',
+    'lori-allen': '/photos/teachers/lori-allen.png',
+    'christopher-burgos': '/photos/teachers/christopher-burgos.png',
+    'james-byers': '/photos/teachers/james-byers.png',
+    'joanna-devoto': '/photos/teachers/joanna-devoto.png',
+    'sarah-twedt': '/photos/teachers/sarah-twedt.png',
   },
   milestones: {
-    'acquiring-trifolds': '',
+    'acquiring-trifolds': '/trifold-display.jpg',
     driving: '/photos/driving.jpg',
     marketing: '',
-    photos: '',
-    game: '',
-    coding: '',
+    photos: '/photos-section.jpg',
+    game: '/byte-to-bite-logo.jpg',
+    coding: '/coding.webp',
   },
 };
 
@@ -152,7 +152,7 @@ document.querySelector('#app').innerHTML = `
   <header class="topbar">
     <div class="wrap nav-shell">
       <a class="brand" href="#home" aria-label="Ereckson Middle School BEST Robotics, home">
-        <span class="brand-mark" aria-hidden="true">E.M.S.</span><span class="brand-name">Ereckson Middle School<span>BEST Robotics</span></span>
+        <span class="brand-mark" aria-hidden="true"><img src="/favicon.ico" alt="" width="36" height="36"></span><span class="brand-name">Ereckson Middle School<span>BEST Robotics</span></span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
       <nav aria-label="Main navigation"><ul class="nav-links" id="primary-nav">
@@ -165,7 +165,7 @@ document.querySelector('#app').innerHTML = `
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <h1 id="hero-title">Ereckson Middle School<br><span>BEST Robotics</span></h1>
-          <p class="hero-quote">Hungry for some BYTES</p>
+          <p class="hero-quote">We’ve got a dream to achieve.</p>
           <div class="hero-actions"><a class="button" href="#about">Start Journey <span class="button-arrow" aria-hidden="true">↘</span></a></div>
         </div>
         <div class="hero-art">
@@ -184,7 +184,7 @@ document.querySelector('#app').innerHTML = `
     </section>
     <section class="section" id="committees" aria-labelledby="committees-title">
       <div class="wrap"><div class="section-head"><p class="eyebrow">One team, many talents</p><h2 id="committees-title">Committees</h2><p class="section-intro">Our robotics committees collaborate seamlessly to design, build, program, and promote our robot, ensuring every part of the team works together toward competition success.</p></div>
-        <div class="committee-grid">${committees.map(([title, text], i) => `<article class="committee"><span class="committee-number">0${i + 1} / TEAM</span><span class="committee-arrow" aria-hidden="true">↗</span><h3>${e(title)}</h3><p>${e(text)}</p></article>`).join('')}</div>
+        <div class="committee-grid">${committees.map(([title, text], i) => `<article class="committee"><span class="committee-number">0${i + 1} / TEAM</span><h3>${e(title)}</h3><p>${e(text)}</p></article>`).join('')}</div>
       </div>
     </section>
     <section class="section section--white" id="projects" aria-labelledby="projects-title">
@@ -194,7 +194,7 @@ document.querySelector('#app').innerHTML = `
     </section>
     <section class="section" id="people" aria-labelledby="people-title">
       <div class="wrap">
-        <div class="people-head"><div class="section-head"><p class="eyebrow">The people behind the work</p><h2 id="people-title">People</h2><p class="section-intro">These are all of the spectacular people that help contribute to make our team who it is today.</p></div><p class="people-count" id="people-count" aria-live="polite"></p></div>
+        <div class="people-head"><div class="section-head"><p class="eyebrow">The people behind the finished products</p><h2 id="people-title">People</h2><p class="section-intro">These are all of the spectacular people that help contribute to make our team who it is today.</p></div><p class="people-count" id="people-count" aria-live="polite"></p></div>
         <ul class="filter-list" aria-label="Filter team members">${['Everyone', 'Tech', 'Display', 'Fabrication', 'Web and Media', 'Sponsors'].map((filter, i) => `<li><button type="button" class="filter-button" data-filter="${e(filter)}" aria-pressed="${i === 0 ? 'true' : 'false'}">${e(filter)}</button></li>`).join('')}</ul>
         <div class="people-grid" id="people-grid">${people.map(([name, role]) => {
           const slug = slugify(name);
@@ -235,7 +235,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-title"><p class="eyebrow">Ereckson Middle School</p><h2>Ereckson Middle School BEST Robotics</h2><p>From Byte to Bite</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#committees">Committees</a><a href="#projects">Project Stories</a><a href="#people">People</a><a href="#process">Working Process</a><a href="#competition">Competition</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQs</a><a href="#milestones">Milestones</a></nav></div><div class="footer-bottom"><p>© Copyright <strong>EMS Robotics</strong> All Rights Reserved</p><p>Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a></p><a class="back-top" href="#home">Back to top ↑</a></div></div></footer>
+  <footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-title"><p class="eyebrow">Ereckson Middle School</p><h2>Ereckson Middle School BEST Robotics</h2><p>We’ve got a dream to achieve.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#committees">Committees</a><a href="#projects">Project Stories</a><a href="#people">People</a><a href="#process">Working Process</a><a href="#competition">Competition</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQs</a><a href="#milestones">Milestones</a></nav></div><div class="footer-bottom"><p>© Copyright <strong>EMS Robotics</strong> All Rights Reserved</p><p>Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a></p><a class="back-top" href="#home">Back to top ↑</a></div></div></footer>
 `;
 
 const menuButton = document.querySelector('.menu-toggle');
@@ -258,7 +258,12 @@ const filterButtons = [...document.querySelectorAll('.filter-button')];
 const personCards = [...document.querySelectorAll('.person')];
 const count = document.querySelector('#people-count');
 const normalizeRole = (role) => role.toLowerCase();
-function filterPeople(filter) {
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+function filterPeople(filter, animate = false) {
+  animate = animate && !reduceMotion.matches;
+  // Remember where each visible card is now, so the cards can slide to their new spots.
+  const before = new Map();
+  if (animate) personCards.forEach((card) => { if (!card.hidden) before.set(card, card.getBoundingClientRect()); });
   let visible = 0;
   personCards.forEach((card) => {
     const role = normalizeRole(card.dataset.role);
@@ -272,10 +277,28 @@ function filterPeople(filter) {
     if (show) visible += 1;
   });
   count.textContent = `${visible} people`;
+  if (!animate) return;
+  let entering = 0;
+  personCards.forEach((card) => {
+    if (card.hidden) return;
+    const from = before.get(card);
+    const to = card.getBoundingClientRect();
+    if (from) {
+      const dx = from.left - to.left;
+      const dy = from.top - to.top;
+      if (dx || dy) card.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: 'none' }], { duration: 600, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+    } else {
+      card.animate([{ opacity: 0, transform: 'scale(.9)' }, { opacity: 1, transform: 'none' }], { duration: 450, delay: 150 + Math.min(entering, 10) * 35, easing: 'ease-out', fill: 'backwards' });
+      entering += 1;
+    }
+  });
+  count.classList.remove('bump');
+  void count.offsetWidth;
+  count.classList.add('bump');
 }
 filterButtons.forEach((button) => button.addEventListener('click', () => {
   filterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
-  filterPeople(button.dataset.filter);
+  filterPeople(button.dataset.filter, true);
 }));
 filterPeople('Everyone');
 
@@ -295,3 +318,48 @@ document.addEventListener('keydown', (event) => {
     menuButton.focus();
   }
 });
+
+// Scroll animations: fade/slide items in as they enter the screen, and count up the numbers.
+// Skipped for people who prefer reduced motion.
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const groups = ['.section-head', '.about-image', '.about-copy', '.committee', '.project', '.process-step', '.competition-copy', '.game-aside', '.field-art', '.field-grid > div:last-child', '.quote-card', '.faq-item', '.milestone', '.person', '.stat', '.metric', '.people-head'];
+  let pending = [];
+  groups.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((el, i) => {
+      el.classList.add('reveal');
+      el.style.setProperty('--d', `${(i % 4) * 90}ms`);
+      pending.push(el);
+    });
+  });
+
+  const countUp = (el) => {
+    const number = el.querySelector('strong');
+    const match = number && number.textContent.match(/^(\d+)(.*)$/);
+    if (!match) return;
+    const end = Number(match[1]);
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min((now - start) / 1100, 1);
+      number.textContent = `${Math.round(end * (1 - Math.pow(1 - t, 3)))}${match[2]}`;
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const check = () => {
+    const limit = window.innerHeight * 0.92;
+    pending = pending.filter((el) => {
+      if (el.getBoundingClientRect().top > limit) return true;
+      el.classList.add('in');
+      if (el.matches('.stat, .metric')) countUp(el);
+      return false;
+    });
+    if (!pending.length) {
+      window.removeEventListener('scroll', check);
+      window.removeEventListener('resize', check);
+    }
+  };
+  window.addEventListener('scroll', check, { passive: true });
+  window.addEventListener('resize', check);
+  check();
+}
