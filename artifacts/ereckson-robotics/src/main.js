@@ -1,5 +1,5 @@
 const committees = [
-  ['Display', 'The Display committee is responsible for the creative and artistic aspects of the team\'s presentation. They construct a large, 8’x8’x4’ display that serves as a physical representation of the team. This exhibit is presented to competition judges to show the team\'s notable achievements, including their sponsors, awards, and other major accomplishments. Additionally, the display team plays a significant role in fostering team spirit, which includes designing and producing custom-made team t-shirts.'],
+  ['Display', 'The Display committee is responsible for the creative and artistic aspects of the team\'s presentation. They make a trifold display that serves as a physical representation of the team. This display is shown to the competition judges to highlight the team\'s notable achievements, sponsors, and committee roles.'],
   ['Website', 'The Web Committee is responsible for creating and maintaining our robotics team website. It promotes our team using text, pictures, and videos to show our work and accomplishments. The website is coded to be simple and easy to navigate, so visitors can quickly find important information. The committee also updates the site regularly to keep everything current and organized.'],
   ['Marketing', 'The marketing team consists of people chosen from different committees for their excellent communication and presentation skills. Their main role is to develop and deliver an elaborate presentation about the robotics team to the competition judges. The foremost objective is to highlight the team\'s key qualities and accomplishments, using their strong public speaking abilities to earn points. They’re the official voice of the team, using their abilities to show the judges how incredible our team is.'],
   ['Fabrication', 'The Fab team is responsible for designing and constructing the robot. This involves the entire process, from creating the initial concept to the physical assembly of the final machine. It is a huge challenge as they must produce a fully operational robot capable of withstanding multiple rounds of competition using only the provided materials. A crucial aspect of their work is maintaining a clear and detailed record of the entire process in the Engineering Notebook. Before construction, they develop a virtual mock-up of the robot using computer-aided design (CAD).'],
@@ -178,7 +178,7 @@ document.querySelector('#app').innerHTML = `
         <div class="about-image"><div class="asset-slot image-slot" role="img" aria-label="Team photo image area. Paste its URL in imageLinks.aboutTeam">${imageMarkup(imageLinks.aboutTeam, 'Ereckson Robotics team')}</div></div>
         <div class="about-copy"><p class="eyebrow">Who we are</p><h2 id="about-title">Crafting Excellence Through Innovation and Dedication</h2>
           <p>As the Ereckson Middle School BEST Robotics team, we are proud to represent the CoCo BEST Area. This competition is a tough, eight-week challenge where we strive for excellence in numerous categories. Beyond just building a high-performing robot, our team is evaluated on various aspects of our work. These include the Simulink Design Award, which showcases our technical prowess in software design, and the Sportsmanship Award, which recognizes our commitment to teamwork and respect. We're also striving for the respected BEST Award, which is a significant honor that celebrates our efforts in project management, community outreach, and overall team spirit.</p>
-          <div class="stats" aria-label="Team stats"><div class="stat"><strong>22+</strong><span>Hours Dedicated</span></div><div class="stat"><strong>4+</strong><span>Years Experience</span></div><div class="stat"><strong>55%</strong><span>Effort and Determination</span></div></div>
+          <div class="stats" aria-label="Team stats"><div class="stat"><strong>60+</strong><span>Hours Dedicated</span></div><div class="stat"><strong>14+</strong><span>Years Experience</span></div><div class="stat"><strong>155%</strong><span>Effort and Determination</span></div></div>
         </div>
       </div>
     </section>
@@ -393,4 +393,83 @@ document.querySelectorAll('#primary-nav li').forEach((li, i) => li.style.setProp
   window.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', update);
   update();
+}
+
+// Hero particles: drifting dots joined by thin lines, which gently move away from the cursor.
+// Skipped for reduced motion, and paused when the hero is off screen or the tab is hidden.
+{
+  const hero = document.querySelector('.hero');
+  if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const canvas = document.createElement('canvas');
+    canvas.className = 'hero-particles';
+    canvas.setAttribute('aria-hidden', 'true');
+    hero.prepend(canvas);
+    const ctx = canvas.getContext('2d');
+    let width = 0;
+    let height = 0;
+    let dots = [];
+    let running = false;
+    let visible = true;
+    const mouse = { x: -9999, y: -9999 };
+    const resize = () => {
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      width = hero.clientWidth;
+      height = hero.clientHeight;
+      canvas.width = width * ratio;
+      canvas.height = height * ratio;
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      const count = Math.round(Math.min(70, Math.max(24, (width * height) / 16000)));
+      dots = Array.from({ length: count }, () => ({
+        x: Math.random() * width, y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35,
+        r: 1.4 + Math.random() * 1.8, silver: Math.random() < 0.35,
+      }));
+    };
+    const frame = () => {
+      if (!running) return;
+      ctx.clearRect(0, 0, width, height);
+      for (const d of dots) {
+        const dx = d.x - mouse.x;
+        const dy = d.y - mouse.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 120 && dist > 0) { d.x += (dx / dist) * 1.6; d.y += (dy / dist) * 1.6; }
+        d.x += d.vx; d.y += d.vy;
+        if (d.x < -10) d.x = width + 10; else if (d.x > width + 10) d.x = -10;
+        if (d.y < -10) d.y = height + 10; else if (d.y > height + 10) d.y = -10;
+      }
+      for (let i = 0; i < dots.length; i += 1) {
+        for (let j = i + 1; j < dots.length; j += 1) {
+          const dist = Math.hypot(dots[i].x - dots[j].x, dots[i].y - dots[j].y);
+          if (dist < 130) {
+            ctx.strokeStyle = `rgba(23, 101, 179, ${0.18 * (1 - dist / 130)})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(dots[i].x, dots[i].y); ctx.lineTo(dots[j].x, dots[j].y); ctx.stroke();
+          }
+        }
+      }
+      for (const d of dots) {
+        ctx.fillStyle = d.silver ? 'rgba(127, 143, 163, 0.6)' : 'rgba(23, 101, 179, 0.45)';
+        ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fill();
+      }
+      requestAnimationFrame(frame);
+    };
+    const sync = () => {
+      const shouldRun = visible && !document.hidden;
+      if (shouldRun && !running) { running = true; requestAnimationFrame(frame); }
+      if (!shouldRun) running = false;
+    };
+    hero.addEventListener('pointermove', (event) => {
+      const rect = hero.getBoundingClientRect();
+      mouse.x = event.clientX - rect.left;
+      mouse.y = event.clientY - rect.top;
+    });
+    hero.addEventListener('pointerleave', () => { mouse.x = -9999; mouse.y = -9999; });
+    window.addEventListener('resize', resize);
+    document.addEventListener('visibilitychange', sync);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => { visible = entries[0].isIntersecting; sync(); }).observe(hero);
+    }
+    resize();
+    sync();
+  }
 }
