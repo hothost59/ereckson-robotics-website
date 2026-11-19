@@ -305,8 +305,23 @@ filterPeople('Everyone');
 document.querySelectorAll('.faq-question').forEach((button) => {
   button.addEventListener('click', () => {
     const expanded = button.getAttribute('aria-expanded') === 'true';
+    const answer = document.getElementById(button.getAttribute('aria-controls'));
     button.setAttribute('aria-expanded', String(!expanded));
-    document.getElementById(button.getAttribute('aria-controls')).hidden = expanded;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { answer.hidden = expanded; return; }
+    // Slide the answer open or closed instead of snapping.
+    answer.getAnimations().forEach((animation) => animation.cancel());
+    answer.style.overflow = 'hidden';
+    const settle = () => { answer.style.overflow = ''; };
+    if (expanded) {
+      const height = answer.offsetHeight;
+      const close = answer.animate([{ height: `${height}px`, opacity: 1 }, { height: '0px', opacity: 0, paddingBottom: '0px' }], { duration: 280, easing: 'ease-in-out' });
+      close.onfinish = () => { answer.hidden = true; settle(); };
+    } else {
+      answer.hidden = false;
+      const height = answer.offsetHeight;
+      const open = answer.animate([{ height: '0px', opacity: 0, paddingBottom: '0px' }, { height: `${height}px`, opacity: 1 }], { duration: 380, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+      open.onfinish = settle;
+    }
   });
 });
 
@@ -362,4 +377,20 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   window.addEventListener('scroll', check, { passive: true });
   window.addEventListener('resize', check);
   check();
+}
+
+// Nav polish: stagger the menu links, shadow when scrolled, highlight the current section.
+document.querySelectorAll('#primary-nav li').forEach((li, i) => li.style.setProperty('--n', String(i)));
+{
+  const topbar = document.querySelector('.topbar');
+  const links = [...document.querySelectorAll('#primary-nav a')].map((a) => ({ a, section: document.querySelector(a.getAttribute('href')) })).filter((item) => item.section);
+  const update = () => {
+    topbar.classList.toggle('is-scrolled', window.scrollY > 8);
+    let current = null;
+    links.forEach((item) => { if (item.section.getBoundingClientRect().top <= 120) current = item; });
+    links.forEach((item) => item.a.classList.toggle('is-active', item === current));
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 }
