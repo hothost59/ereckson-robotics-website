@@ -319,3 +319,10 @@ h2 { max-width: 780px; margin-bottom: 18px; font-size: clamp(2.25rem, 5vw, 4rem)
 .filter-button { transition: background .25s ease, color .25s ease, border-color .25s ease, translate .2s ease; }
 .filter-button:active { translate: 0 1px; }
 @media (prefers-reduced-motion: reduce) { .people-count.bump { animation: none; } }
+
+/* Sponsor list on the Finding Sponsors card */
+.sponsor-label { margin-top: 16px !important; color: var(--blue) !important; font: 700 10px var(--mono) !important; letter-spacing: .12em; text-transform: uppercase; }
+.sponsor-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 0; padding: 0; list-style: none; }
+.sponsor-list li { display: flex; align-items: center; gap: 10px; padding: 6px 11px; background: #edf5fa; border-left: 3px solid var(--gold); color: var(--ink); font-size: 12px; font-weight: 700; }
+.sponsor-list img { display: block; height: 34px; width: auto; max-width: 92px; object-fit: contain; border-radius: 4px; }
+.project-image-slot .slot-image { object-fit: contain; background: #fff; padding: 0; transform: scale(1.1); }

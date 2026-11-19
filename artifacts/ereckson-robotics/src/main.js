@@ -8,7 +8,7 @@ const committees = [
 ];
 
 const projects = [
-  { title: 'Finding Sponsors', text: 'During the beginning of the year, we researched and called many local companies to ask if they could support our robotics team through sponsorships, donations, or resources.', points: ['Overcame Public Anxiety', 'Strengthens community connections', 'Creates new networking opportunities'] },
+  { title: 'Finding Sponsors', sponsors: [{ name: 'Hashi Japanese Kitchen', logo: '/sponsors/hashi.png' }, { name: 'Asian King Buffet Waxahachie', logo: '/sponsors/asian-king-buffet.png' }, { name: 'Ereckson PTA', logo: '/sponsors/ereckson-pta.png' }], text: 'During the beginning of the year, we researched and called many local companies to ask if they could support our robotics team through sponsorships, donations, or resources.', points: ['Overcame Public Anxiety', 'Strengthens community connections', 'Creates new networking opportunities'] },
   { title: 'STEAM Center', text: 'We have dedicated countless hours at the STEAM Center, receiving valuable mentorship and guidance from Mr. Gadd as well as the experienced students of Allen High School Robotics, which has greatly helped us refine our skills and strategies.', points: ['Strategy Development', 'Problem-Solving', 'Teamwork and Communication'] },
 ];
 
@@ -189,7 +189,7 @@ document.querySelector('#app').innerHTML = `
     </section>
     <section class="section section--white" id="projects" aria-labelledby="projects-title">
       <div class="wrap"><div class="section-head"><p class="eyebrow">Making it happen</p><h2 id="projects-title">Project Stories</h2></div>
-        <div class="projects-grid">${projects.map((project, i) => `<article class="project"><div><p class="eyebrow">Team project · 0${i + 1}</p><h3>${e(project.title)}</h3><p>${e(project.text)}</p></div><div class="project-aside"><div class="project-image-slot image-slot" role="img" aria-label="${e(project.title)} photo area. Paste its URL in imageLinks.projects.${e(slugify(project.title))}">${imageMarkup(imageLinks.projects[slugify(project.title)], `${project.title} photo`)}</div>${project.points.map((point) => `<span>${e(point)}</span>`).join('')}</div></article>`).join('')}</div>
+        <div class="projects-grid">${projects.map((project, i) => `<article class="project"><div><p class="eyebrow">Team project · 0${i + 1}</p><h3>${e(project.title)}</h3><p>${e(project.text)}</p>${project.sponsors ? `<p class="sponsor-label">Thank you to our sponsors</p><ul class="sponsor-list">${project.sponsors.map(({ name, logo }) => `<li>${logo ? `<img src="${e(logo)}" alt="" loading="lazy">` : ''}<span>${e(name)}</span></li>`).join('')}</ul>` : ''}</div><div class="project-aside">${project.sponsors ? '' : `<div class="project-image-slot image-slot" role="img" aria-label="${e(project.title)} photo area. Paste its URL in imageLinks.projects.${e(slugify(project.title))}">${imageMarkup(imageLinks.projects[slugify(project.title)], `${project.title} photo`)}</div>`}${project.points.map((point) => `<span>${e(point)}</span>`).join('')}</div></article>`).join('')}</div>
       </div>
     </section>
     <section class="section" id="people" aria-labelledby="people-title">
